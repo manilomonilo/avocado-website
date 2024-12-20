@@ -19,7 +19,6 @@
 
 html {
     scroll-behavior: smooth;
-    /* overflow: hidden; */
 }
 
 
@@ -45,7 +44,6 @@ img {
 /* Header */
 
 .header {
-    /* width: 90%; */
     display: flex;
     padding-top: .5rem;
     padding-bottom: .5rem;
@@ -76,11 +74,6 @@ img {
     }
 }
 
-/* add the animation thing */
-
-.animated-avocado {
-    color: white;
-}
 
 /* Main */
 
@@ -91,6 +84,7 @@ img {
     justify-content: space-around;
     align-items: center;
     text-align: start;
+    margin-top: 80px;
 }
 
 .main-section__text {
@@ -178,11 +172,11 @@ img {
 /* Cards section */
 
 .cards-section {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 3rem;
 }
 
 .cards-section__title {
@@ -190,14 +184,15 @@ img {
 }
 
 .cards {
-    display: grid;
-    grid-template-columns: repeat(4, calc(25% - .8rem));
-    grid-template-rows: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 1rem;
     transform: translate(0, -50px);
 }
 
 .cards-section__card {
+    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -312,10 +307,9 @@ img {
     font-size: var(--fs-small);
 }
 
-/* container */
 
 .container {
-    max-width: 1536px;
+    overflow: hidden;
     margin-left: auto;
     margin-right: auto;
     padding-left: 0.5rem;
@@ -324,44 +318,53 @@ img {
 
 /* media queries */
 
-/* xs */
-@media (max-width: 475px) {
-    .container {
-        max-width: 475px;
+@media (max-width: 614px) {
+    body {
+        font-size: .9rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .main-avocado-img {
+        width: 200px;
+    }
+
+    .faq-section__questions {
+        font-size: 1rem;
+    }
+    
+    .nav-list {
+        display: none;
+    }
+    
+    .logo {
+        width: 100px;
+        align-self: center;
     }
 }
 
-/* sm */
-@media (max-width: 640px) {
-    .container {
-        max-width: 640px;
+@media (max-width: 562px) {
+    .faq-section__quetion::before {
+        display: none;
     }
 }
 
-/* md */
-@media (max-width: 768px) {
-    .container {
-        max-width: 768px;
+@media (max-width: 425px) {
+    .about-section {
+        height: inherit;
+        text-align: center;
+        padding: .5rem;
+        margin-top: 5rem;
+        margin-bottom: 10rem;
     }
-}
 
-/* lg */
-@media (max-width: 1024px) {
-    .container {
-        max-width: 1024px;
+    .about-section__parg {
+        width: 80%;
     }
-}
 
-/* xl */
-@media (max-width: 1280px) {
-    .container {
-        max-width: 1280px;
-    }
-}
-
-/* 2xl */
-@media (max-width: 1536px) {
-    .container {
-        max-width: 1536px;
+    .main-avocado-img {
+        width: 150px;
     }
 }
