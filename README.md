@@ -4,5 +4,5 @@ This website is a simple single page website about avocado, i've made it to appl
 
 live website:
 
-[website](https://www)
+[website](https://manilomonilo.github.io/avocado-website/)
 
